@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gambar {
+    width: 100%;
+    max-height: 600px;
+    object-fit: center;
+    object-position: center;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 130px;
+    color: rgb(255, 255, 255);
+}
+
+.active {
+    color: #009EFF;
+}
+
+.navbar a {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #009EFF;
+    left: 0;
+    bottom: -7px;
+    transform: scale(0);
+    transition: transform .4s;
+}
+
+.navbar a:hover::after {
+    transform: scale(1);
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 25px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: #009EFF;
+}
+
+.title {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 76px;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: transparent;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -770px 0;
+    animation: backcolor 5s linear infinite alternate;
+}
+
+.button {
+    text-decoration: none;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #205295;
+    color: #fff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.button:hover {
+    background-color: #243763;
+}
+
+@keyframes backcolor {
+    100% {
+        background-position: 0 0;
+    }
+}
